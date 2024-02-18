@@ -1,6 +1,8 @@
+let textoInput = document.querySelector("textarea").value;
+
 //criptografia
 function criptografia() {
-    const fraseNormal = "teste de palavras obita iris";
+    const fraseNormal = textoInput;
     const palavrasNormais = fraseNormal.split(" ");
     
     let arrayPalavraCriptografada = [];
@@ -16,9 +18,10 @@ function criptografia() {
     return palavraCripto;
 }
 
+
 //descriptografia
 function descriptografia() {
-    const fraseCriptografada = "tenterstenter denter pailaivrais oberbinestai inesriness";
+    const fraseCriptografada = textoInput;
     const palavrasCriptografadas = fraseCriptografada.split(" ");
 
     let arrayDePalavraDescriptografada = [];
@@ -34,4 +37,3 @@ function descriptografia() {
     return palavraDescriptografada
 
 }
-console.log(descriptografia());

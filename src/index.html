@@ -3,13 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descriptografia</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Alura Challenge - Desafio 1</title>
 </head>
 <body>
-    <header></header>
-    <main class="apresentacao">
-        <img src="img/Frame 6.png" alt="Letra a no canto">
-        <img src="img/Fra" alt="">
+    <main>
+        <div class="icone">
+            <img class="icone__canto" src="img/Frame 6.png" alt="icone A">
+        </div>
+        <div class="texto">
+            <div>
+                <textarea class="texto__input" wrap="hard" placeholder="Digite seu texto!" type="text" name="texto_para_conversao" id="input_texto"></textarea>
+            </div>
+        </div>
+        <div class="resultado">
+            <img class="resultado__retangulo" src="img/Rectangle 1.png" alt="Rectangle">
+            <div class="resultado__imagens">
+                <div>
+                    <img src="img/High quality products 1 1.png" alt="pessoa com lupa">
+                    <img src="img/Frame 5.png" alt="nenhuma mensagem encontrada">
+                </div>
+                <div>
+                    <button onclick="" id="copiar" class="botao__copiar">Copiar</button>
+                </div>
+            </div>
+        </div>
+        <div class="parte__inferior">
+            <div class="parte__inferior__botoes__aviso">
+                <div class="parte__inferior__aviso">
+                    <img class="parte__inferior__exclamacao" src="img/bi_exclamation-circle-fill.png" alt="">
+                    <h6 class="parte__inferior__texto" > Apenas letras minúsculas e sem acento.</h6>
+                </div>
+                <div class="parte__inferior__botoes">
+                    <button onclick="criptografia()" id="criptografar" class="botao__criptografar">Criptografar</button>
+                    <button onclick="descriptografia()" id="descriptografar" class="botao_descriptografar">Descriptografar</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
     <script src="app.js" defer></script>
