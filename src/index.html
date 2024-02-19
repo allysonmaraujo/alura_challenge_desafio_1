@@ -13,18 +13,19 @@
         </div>
         <div class="texto">
             <div>
-                <textarea class="texto__input" wrap="hard" placeholder="Digite seu texto!" type="text" name="texto_para_conversao" id="input_texto"></textarea>
+                <textarea maxlength="100" class="texto__input" wrap="hard" placeholder="Digite seu texto!" type="text" name="texto_para_conversao" id="input__texto"></textarea>
             </div>
         </div>
         <div class="resultado">
             <img class="resultado__retangulo" src="img/Rectangle 1.png" alt="Rectangle">
+            <p id="texto__output" class="resultado__texto"></p>
             <div class="resultado__imagens">
-                <div>
-                    <img src="img/High quality products 1 1.png" alt="pessoa com lupa">
-                    <img src="img/Frame 5.png" alt="nenhuma mensagem encontrada">
+                <div id="resultado__imagens__mensagem">
+                    <img class="resultado__imagens__mensagens1" src="img/High quality products 1 1.png" alt="pessoa com lupa">
+                    <img class="resultado__imagens__mensagens2" src="img/Frame 5.png" alt="nenhuma mensagem encontrada">
                 </div>
                 <div>
-                    <button onclick="" id="copiar" class="botao__copiar">Copiar</button>
+                    <button onclick="copiar()" id="copiar" class="botao__copiar">Copiar</button>
                 </div>
             </div>
         </div>
@@ -41,7 +42,7 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>Criado por Allyson Araujo para Alura ChallengeOne Oracle 2024 T6</footer>
     <script src="app.js" defer></script>
 </body>
 </html>

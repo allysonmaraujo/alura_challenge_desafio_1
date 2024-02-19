@@ -1,39 +1,48 @@
-let textoInput = document.querySelector("textarea").value;
-
-//criptografia
 function criptografia() {
-    const fraseNormal = textoInput;
-    const palavrasNormais = fraseNormal.split(" ");
-    
-    let arrayPalavraCriptografada = [];
-    for (let palavra of palavrasNormais){
+    let textoInput = document.getElementById("input__texto").value;
+    const fraseDoInput = textoInput.split(" ");
+    document.getElementById("resultado__imagens__mensagem").style.display = "none";
+
+    let arrayPalavrasCriptografadas = [];
+    for (let palavra of fraseDoInput){
         let letraE = palavra.replace(/e/g, "enter");
         let letraI = letraE.replace(/i/g, "ines");
         let letraA = letraI.replace(/a/g, "ai");
         let letraO = letraA.replace(/o/g, "ober");
         let letraU = letraO.replace(/u/g, "ufar");
-        arrayPalavraCriptografada.push(letraU);
+        arrayPalavrasCriptografadas.push(letraU);
     }
-    let palavraCripto = arrayPalavraCriptografada.join(" ");
-    return palavraCripto;
+    let fraseResultado = arrayPalavrasCriptografadas.join(" ");
+    
+    return resultado(fraseResultado);
 }
 
-
-//descriptografia
 function descriptografia() {
-    const fraseCriptografada = textoInput;
-    const palavrasCriptografadas = fraseCriptografada.split(" ");
+    let textoInput = document.getElementById("input__texto").value;
+    const fraseDoInput = textoInput.split(" ");
+    document.getElementById("resultado__imagens__mensagem").style.display = "none";
 
-    let arrayDePalavraDescriptografada = [];
-    for (let palavra of palavrasCriptografadas) {
+    let arrayDePalavrasDescriptografadas = [];
+    for (let palavra of fraseDoInput) {
         let letraE = palavra.replace(/enter/g, "e");
         let letraI = letraE.replace(/ines/g, "i");
         let letraA = letraI.replace(/ai/g, "a");
         let letraO = letraA.replace(/ober/g, "o");
         let letraU = letraO.replace(/ufar/g, "u");
-        arrayDePalavraDescriptografada.push(letraU);
+        arrayDePalavrasDescriptografadas.push(letraU);
     }
-    let palavraDescriptografada = arrayDePalavraDescriptografada.join(" ");
-    return palavraDescriptografada
+    let fraseResultado = arrayDePalavrasDescriptografadas.join(" ");
+    
+    return resultado(fraseResultado); 
+}
 
+
+function resultado(textoDeSaida) {
+    let exibirTextoResultado = document.querySelector("p");
+    exibirTextoResultado.innerHTML = textoDeSaida;
+}
+
+function copiar() {
+    const selecionarCopia = document.getElementById("texto__output");
+    navigator.clipboard.writeText(selecionarCopia.textContent)
 }

@@ -54,6 +54,7 @@ textarea:focus, input:focus, select:focus {
 }
 
 .resultado__imagens {
+    display: block;
     position: absolute;
     width: 336px;
     height: 304px;
@@ -61,6 +62,21 @@ textarea:focus, input:focus, select:focus {
     left: 1032px;
     flex-direction: row;
     align-items: center;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    text-wrap: stable;
+    color: #495057;
+    word-break: keep-all;
+    position: absolute;
+    width: 316px;
+    height: 768px;
+    top: 70px;
+    left: 1050px;
 }
 
 .botao__copiar {
@@ -146,4 +162,16 @@ textarea:focus, input:focus, select:focus {
     width: 328px;
     height: 67px;
     gap: 8px;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    color: #495057;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0em;
+    top: 115%;
+    left: 30%;
 }
